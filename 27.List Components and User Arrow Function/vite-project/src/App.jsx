@@ -3,7 +3,7 @@ import Poster from "./components/Poster";
 const App = () => {
   return (
     <>
-      <div className="container">
+      <div className="w-full">
         <Poster />
       </div>
     </>
