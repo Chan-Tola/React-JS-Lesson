@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
 const App = () => {
-  const [value, setValue] = useState(
-    ""
-  );
+  const [value, setValue] = useState("");
+  const arr = ["a", "b"];
   const handdleOnchange = (e) => {
     setValue(e.target.value);
   };
+//   const submitToArr = (e) => {
+//     const newArr = arr.push(setValue(e.target.value));
+//     setValue("");
+//     console.log(newArr);
+//   };
   return (
     <>
       <div className="card">
@@ -21,6 +25,9 @@ const App = () => {
           <button className="card__button" onClick={() => (setValue = "")}>
             Reset
           </button>
+          {/* <button className="card__button" onClick={submitToArr}>
+            submit
+          </button> */}
         </form>
       </div>
     </>
