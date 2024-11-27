@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 const CardFetch = () => {
   const url = "https://api.github.com/users";
+  // const url = "https://jsonplaceholder.typicode.com/users";
 
   const [user, setUsers] = useState([]);
+  const [isloading, setloading] = useState(true);
   // console.log(user);
   useEffect(() => {
     const userFetch = async () => {
@@ -19,10 +21,13 @@ const CardFetch = () => {
       } catch (eror) {
         console.log(eror);
       }
+      setloading(false);
     };
     userFetch();
   }, []);
-
+  if(isloading){
+    return <h2>Loading...!</h2>
+  }
   return (
     <>
       {user.map(({ id, login, avatar_url, html_url }) => {
