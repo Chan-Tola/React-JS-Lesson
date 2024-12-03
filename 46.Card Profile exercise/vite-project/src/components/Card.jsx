@@ -1,10 +1,9 @@
 import React from "react";
 import "./CardStyle.css";
-const Card = (props) => {
-  const { id, name, img, positions, getId} = props;
+const Card = ({ id, name, img, positions, getId }) => {
+  // const { id, name, img, positions, getId} = props;
   function handleClick() {
     getId(id);
-    // console.log(props);
   }
   return (
     <>

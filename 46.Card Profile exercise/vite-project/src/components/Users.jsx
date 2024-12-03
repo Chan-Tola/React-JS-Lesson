@@ -7,6 +7,7 @@ import { useState } from "react";
 const Users = () => {
   const [users, userSets] = useState(Data);
   function getIdUser(id) {
+    console.log(id);
     const newFileter = users.filter((item) => {
       if (item.id !== id) {
         return item;
