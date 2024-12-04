@@ -1,9 +1,16 @@
+import { useReducer } from "react";
 import useFetchData from "./useFetchData";
+const url = "https://jsonplaceholder.typicode.com/users";
 
+const initState = {
+  users: data,
+  isLoading: True,
+  isError: false,
+};
+const reducer = (state, action) => {};
 const SportFetch = () => {
-  // const url = "https://api.github.com/user";
-  const url = "https://jsonplaceholder.typicode.com/users";
-  const { nameSport, isLoading, isError } = useFetchData(url);
+  const [state, dispatch] = useReducer(reducer, initState);
+  const { isError, isLoading, users } = state;
   if (isLoading) {
     return <h1>Loading...!</h1>;
   }
@@ -13,7 +20,7 @@ const SportFetch = () => {
 
   return (
     <>
-      {nameSport.map(({ id, name, username, email }) => {
+      {users.map(({ id, name, username, email }) => {
         return (
           <article key={id}>
             {/* <img src={avatar_url} alt="" /> */}
