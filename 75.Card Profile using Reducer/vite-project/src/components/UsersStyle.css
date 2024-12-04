@@ -1,0 +1,27 @@
+.conainter {
+  margin: 10px auto;
+  padding: 5px 20px;
+  background-color: rgb(248, 246, 246);
+  width: 50%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.conainter .btn {
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  background-color: green;
+  transition: all 0.3ms ease;
+  font-weight: 600;
+  width: 100%;
+}
+.conainter .btn:hover {
+  color: white;
+}
