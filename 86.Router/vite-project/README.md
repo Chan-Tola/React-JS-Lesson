@@ -25,4 +25,4 @@ have page for example user page and the id user is 123
 and when another user go to that that page so we dont need to change the page structure
 we use dynamic routes to sovle that.
 10.loading Function : we use it to show the apit that we have to fetch example like the useffect
-11.Page detail
+11.Page detail 
