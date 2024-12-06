@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const User = () => {
   // const param = useParams();
@@ -9,8 +9,10 @@ const User = () => {
       <center>
         {dataFetch.map((e) => {
           return (
-            <div key={e.id}>
-              <h2>{e.name}</h2>
+            <div>
+              <Link key={e.id} to={e.id.toString()}>
+                {e.name}
+              </Link>
             </div>
           );
         })}
